@@ -17,35 +17,11 @@ public class programmers_17687 {
 				num/=n;
 			}
 			binary_answer+=temp;
-			System.out.println(binary_answer);
 			number++;
 		}
-		for (int i = p-1; i < binary_answer.length(); i+=m) {
+		for (int i = p-1; i < binary_answer.length() && answer.length()<t; i+=m) {
 			answer+= binary_answer.charAt(i);
 		}
-//		int num = 1;// 진수 변환할 숫자
-//		int turn = 1; // 인원수 만큼 돌아야함
-//		if(turn == p) {
-//			answer+="0"; // 말 할 순서가 첫번째일 경우: 무조건 0을 추가하기
-//			turn = (turn+1)%m;
-//		}
-//		while(answer.length()<t) {
-//			
-//			while(num>0) {
-//				String now_s ="";
-//				
-//				// n진수 자리 
-//				int now = num%n;
-//				num/=n;
-//				
-//				if(turn == p) {
-//					turn = (turn+1)%m;
-//				}
-//
-//				turn = (turn+1)%m;
-//			}
-//			num+=1;
-//		}
 		return answer;
 	}
 	
