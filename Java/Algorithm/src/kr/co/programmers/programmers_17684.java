@@ -1,5 +1,8 @@
+package kr.co.programmers;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class programmers_17684 {
@@ -36,7 +39,10 @@ public class programmers_17684 {
 	
 	public static void main(String[] args) {
 		String str = "TOBEORNOTTOBEORTOBEORNOT";
-		System.out.println(solution(str));
+		int[] a = solution(str);
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i]+" ");
+		}
 	}
 
 }
