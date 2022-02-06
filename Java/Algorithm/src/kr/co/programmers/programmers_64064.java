@@ -27,7 +27,6 @@ public class programmers_64064 {
 		if (len == banned_id.length) {
 			String[] str = new String[len];
 			Collections.sort(arrayList);
-			System.out.println(arrayList.toString());
 			set.add(arrayList.toString());
 			return;
 		}
