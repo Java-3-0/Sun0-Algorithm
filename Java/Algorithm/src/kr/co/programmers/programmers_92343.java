@@ -24,7 +24,6 @@ public class programmers_92343 {
 		maxSheep = new ArrayList<Integer>();
 		List<Integer> canGo = new ArrayList<Integer>();
 
-		// 트리 만들기
 		for (int i = 0; i < edges.length; i++) {
 			int parent = edges[i][0];
 			int child = edges[i][1];
@@ -47,8 +46,8 @@ public class programmers_92343 {
 		list.addAll(canGo);
 
 		list.remove(Integer.valueOf(idx));
-		if (tree[idx] != null) { // 자식이 있을 때
-			for (int child : tree[idx]) { // 갈 수 있는 리스트에 child 추가
+		if (tree[idx] != null) {
+			for (int child : tree[idx]) {
 				list.add(child);
 			}
 		}
