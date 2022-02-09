@@ -23,7 +23,7 @@ public class baekjoon_17298 {
 
 		for (int i = n - 2; i >= 0; i--) {
 			int now = Integer.parseInt(arr[i]);
-			while (!copy.empty() && copy.peek() < now) {
+			while (!copy.empty() && copy.peek() <= now) {
 				copy.pop();
 			}
 			if (copy.empty())
