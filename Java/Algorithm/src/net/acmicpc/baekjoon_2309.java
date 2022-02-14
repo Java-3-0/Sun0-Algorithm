@@ -1,3 +1,4 @@
+//14344kb,132ms
 package net.acmicpc;
 
 import java.io.BufferedReader;
