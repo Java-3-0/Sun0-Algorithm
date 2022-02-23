@@ -18,22 +18,22 @@ public class baekjoon_11866 {
 		int k = Integer.parseInt(arr[1]);
 
 		Queue<Integer> que = new LinkedList<Integer>();
-
+		
 		// 1~n까지 큐에 삽입
 		for (int i = 1; i <= n; i++)
 			que.offer(i);
 
 		sb.append("<");
 		while (true) {
-
-			// k번째를 빼기 위해 1 ~ (k-1) 번째는 앞에서 빼서 뒤로 넣기
+			
+			// k번째를 빼기 위해 1 ~ (k-1) 번째는 앞에서 빼서 뒤로 넣기 
 			for (int i = 0; i < k - 1; i++) {
 				que.offer(que.poll());
 			}
-
+			
 			// k번째 빼기
 			int number = que.poll();
-
+			
 			// 만약에 뺐는데 큐가 비었으면 종료
 			if (que.isEmpty()) {
 				sb.append(number + ">");
