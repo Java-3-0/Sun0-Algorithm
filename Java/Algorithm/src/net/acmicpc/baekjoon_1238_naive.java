@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class baekjoon_1238 {
+public class baekjoon_1238_naive {
     public static ArrayList<Integer[]>[] link;
     private static int N;
 
