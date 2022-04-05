@@ -58,12 +58,6 @@ public class swea_5656 {
             Queue<int[]> explodedBomb = Explode(i);
             Queue<int[]> gravity = GiveGravity();
 
-//            if (depth == 2 && i == 2) {
-//                for (int j = 0; j < h; j++) {
-//                    System.out.println(Arrays.toString(arr[j]));
-//                }
-//                System.out.println("******");
-//            }
             if (explodedBomb.size() > 0) {
                 DFS(depth + 1, cnt + explodedBomb.size());
                 Undo(gravity);
