@@ -1,3 +1,7 @@
+/***
+ * 98,316 kb
+ * 1,968 ms
+ */
 package com.swexpertacademy;
 
 import java.io.BufferedReader;
