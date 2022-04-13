@@ -18,6 +18,25 @@ public class baekjoon_1929 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
+        byte[] bytes = new byte[m / 8 + 1];
+        bytes[0] = 1;
+        bytes[0] |= 1 << 1;
+
+        for (int i = 2; i <= Math.sqrt(m + 1); i++) {
+            for (int j = i * i; j < m + 1; j += i) {
+                bytes[j / 8] |= 1 << j % 8;
+            }
+        }
+
+        for (int i = n; i < m + 1; i++) {
+            if ((bytes[i / 8] & (1 << i % 8)) == 0)
+                sb.append(i).append("\n");
+        }
+
+        System.out.println(sb);
+
+
+        // 배열 버전
         boolean[] arr = new boolean[m + 1];
         arr[0] = true;
         arr[1] = true;
@@ -26,6 +45,7 @@ public class baekjoon_1929 {
                 arr[j] = true;
             }
         }
+
         for (int i = n; i < m + 1; i++) {
             if (!arr[i]) {
                 sb.append(i).append("\n");
