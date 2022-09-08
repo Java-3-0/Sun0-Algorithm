@@ -27,7 +27,7 @@ public class baekjoon_2668 {
         }
         max = 0;
         visited = new boolean[n];
-        answer = new HashSet<>();
+        answer = new HashSet<>(); // 1 3
         for (int i = 0; i < n; i++) {
             Arrays.fill(visited, false);
             mother = new HashSet<>();
@@ -44,15 +44,7 @@ public class baekjoon_2668 {
 
     private static void dfs(int i, int me, int depth) {
         if (i == me && depth != 0) {// 시작점으로 돌아옴
-            HashSet<Integer> temp = new HashSet<>(answer);
-            temp.removeAll(mother); // 원래꺼에서 지금꺼 삭제
-            if (temp.size() == answer.size()) { // 겹치는 게 없으니까 사이즈 유지되는거임
-                max += depth;
-                answer.addAll(mother);
-            } else if (depth > max) {
-                max = depth;
-                answer = new HashSet<>(mother);
-            }
+            answer.addAll(mother);
             return;
         }
         if (!visited[me]) { // 자식들 순회
